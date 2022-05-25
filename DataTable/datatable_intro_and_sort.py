@@ -1,8 +1,4 @@
-import dash  #(version 1.12.0)
-from dash.dependencies import Input, Output
-import dash_table
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import Dash, dcc, html, Input, Output, dash_table   #(version 2.3.1)
 import plotly.express as px
 import pandas as pd
 
@@ -18,7 +14,7 @@ print(df.columns)
 
 # -------------------------------------------------------------------------------------
 # App layout
-app = dash.Dash(__name__, prevent_initial_callbacks=True) # this was introduced in Dash version 1.12.0
+app =Dash(__name__, prevent_initial_callbacks=True) # this was introduced in Dash version 1.12.0
 
 # Sorting operators (https://dash.plotly.com/datatable/filtering)
 app.layout = html.Div([
